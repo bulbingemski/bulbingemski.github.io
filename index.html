@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Use JavaScript to Change Text</h2>
+<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script> 
+
+<script>
+const fs = require('fs');
+const options = {
+  key: fs.readFileSync('localhost-key.pem'),
+  cert: fs.readFileSync('localhost.pem'),
+};
+exports.options = options;
+
+const https = require('https');
+const { options } = require('.');
+
+https
+    .createServer(options, function (req, res) {
+        // server code
+    })
+    .listen({ 8080:  localhost});
+</script>
+
+</body>
+</html>
