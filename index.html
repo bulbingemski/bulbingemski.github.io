@@ -10,24 +10,3 @@
 <script>
 document.getElementById("demo").innerHTML = "Hello JavaScript!";
 </script> 
-
-<script>
-const fs = require('fs');
-const options = {
-  key: fs.readFileSync('localhost-key.pem'),
-  cert: fs.readFileSync('localhost.pem'),
-};
-exports.options = options;
-
-const https = require('https');
-const { options } = require('.');
-
-https
-    .createServer(options, function (req, res) {
-        // server code
-    })
-    .listen({ 8080:  localhost});
-</script>
-
-</body>
-</html>
